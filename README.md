@@ -164,6 +164,7 @@ echo OSX (gcc+clang)       && cc  demo.c -ObjC fwk.c -o demo -w -framework cocoa
 ```
 <!-- - Note: Windows: Assimp.dll may need [this package installed](https://www.microsoft.com/en-us/download/confirmation.aspx?id=30679).-->
 - Note: TCC is partially supported on Windows+Linux. Beware, no threading.
+- Note: FWK as DLL: `cl fwk.c /LD /DAPI=EXPORT`, then `cl demo_dll.c fwk.lib /DAPI=IMPORT`.
 
 ## Amalgamation
 - Split FWK into separate files by running `art/tools/split.bat` (or `sh art/tools/split.bat` in Linux/OSX).
